@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Page</title>
+<link rel="stylesheet" href="login.css">
+</head>
+<body>
+	<h2>Login Form</h2>
+	<table>
+		<form action="LoginServlet" method="post">
+			<tr>
+				<td>Username:</td>
+				<td><input type="text" name="username"></td>
+			</tr>
+			<tr>
+				<td>Password:</td>
+				<td><input type="password" name="password"> <input
+					type="checkbox" onclick="togglePassword()"> Show Password</td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="submit" value="Login">
+					<p class="error-message">Invalid Username or Password</p> <!-- Display error message if present -->
+				</td>
+			</tr>
+		</form>
+	</table>
+	<script>
+        function togglePassword() {
+            var passwordInput = document.getElementById("password");
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+            } else {
+                passwordInput.type = "password";
+            }
+        }
+    </script>
+</body>
+</html>

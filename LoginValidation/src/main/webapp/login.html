@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Page</title>
+<link rel="stylesheet" href="login.css">
+</head>
+<body>
+	<form action="LoginServlet" method="post" name="loginForm">
+		<h2>LOGIN FORM</h2>
+		<p class="error-message"></p>
+		<table>
+			<tr>
+				<td>USERNAME:</td>
+				<td><input type="text" name="username" required></td>
+			</tr>
+			<tr>
+				<td>PASSWORD:</td>
+				<td><input type="password" name="password" id="password"
+					required> <input type="checkbox" onclick="togglePassword()">
+					Show Password</td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="submit" value="Login"></td>
+			</tr>
+		</table>
+	</form>
+	<script>
+        function togglePassword() {
+            var passwordInput = document.getElementById("password");
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+            } else {
+                passwordInput.type = "password";
+            }
+        }
+    </script>
+</body>
+</html>

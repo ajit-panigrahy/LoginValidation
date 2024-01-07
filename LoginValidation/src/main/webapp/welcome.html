@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control"
+	content="no-store, no-cache, must-revalidate, post-check=0, pre-check=0">
+<title>Welcome Page</title>
+<style>
+body {
+	background-color: #3498db;
+	color: #fff;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+h2 {
+	text-align: center;
+}
+
+form {
+	text-align: center;
+}
+
+input[type="submit"] {
+	background-color: #2ecc71;
+	color: white;
+	padding: 10px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 16px;
+}
+
+input[type="submit"]:hover {
+	background-color: #27ae60;
+}
+</style>
+</head>
+<body>
+	<h2>Welcome to Our Awesome Website!</h2>
+	<br>
+	<form action="LogoutServlet" method="post">
+		<input type="submit" value="Logout">
+	</form>
+</body>
+</html>
